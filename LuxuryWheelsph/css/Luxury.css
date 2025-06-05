@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #121212, #434343);
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: #cc0000; /* Ferrari red thematic */
+    padding: 15px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 10;
+  }
+  header h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    margin: 0 12px;
+  }
+  nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+  }
+  nav li a:hover {
+    color: #ffd700; /* gold highlight */
+  }
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    user-select: none;
+  }
+  main {
+    flex-grow: 1;
+    padding: 25px 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .post {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  h2 {
+    margin-bottom: 20px;
+    color: #ffd700;
+    letter-spacing: 2px;
+  }
+  h3 {
+    margin-bottom: 10px;
+    color: #cc0000;
+    letter-spacing: 1px;
+  }
+  h4 {
+    margin-top: 15px;
+    color: #ff4500;
+  }
+  p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .car-item {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .car-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 215, 0, 0.2);
+  }
+  .car-item img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: #222;
+  }
+  .brand-section {
+    margin-bottom: 40px;
+  }
+  .car-listings-ul {
+    list-style-type: none;
+    padding-left: 15px;
+  }
+  .car-listings-ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .brands-list-ul {
+    list-style-type: none;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .brands-list-ul li {
+    background-color: rgba(204, 0, 0, 0.8);
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+  }
+  .brands-list-ul li a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .brands-list-ul li:hover {
+    background-color: #ffd700;
+  }
+  .brands-list-ul li:hover a {
+    color: #121212;
+  }
+  footer {
+    background-color: #cc0000;
+    text-align: center;
+    padding: 15px 20px;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+  }
+  .modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .modal-content {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    color: #ffd700;
+    position: relative;
+    box-shadow: 0 0 25px #cc0000;
+    text-align: center;
+  }
+  .modal-content img.modal-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffd700;
+    user-select: none;
+  }
+  @media (max-width: 700px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #cc0000;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 150px;
+      border-radius: 0 0 0 12px;
+      z-index: 100;
+    }
+    nav.active ul {
+      display: flex;
+    }
+    nav li {
+      margin: 10px 0;
+      text-align: right;
+      margin-right: 15px;
+    }
+    nav li a {
+      font-size: 1.2rem;
+    }
+
+    .hamburger {
+      display: block;
+    }
+    .car-item {
+      width: calc(50% - 20px);
+    }
+  }
+  @media (max-width: 450px) {
+    .car-item {
+      width: 100%;
+    }
+  }
